@@ -2,7 +2,11 @@
 
 Problem med att få upp det här på github, försöker igen.
 
+Och igen.
+
 # 2025-11-06
+![Orörd packet tracer-fil från skolan](<Screenshots/Skärmbild 2025-11-06 Orörd.png>)
+
 Jag börjar med att konfigurera switchar på GBG-sidan, se kod längre ner.
 Vi skapar alltså alla vlan, 10 för kontor, 20 för gäst, 99 för admin samt 999 som ska användas senare för övrig trafik.
 
@@ -14,8 +18,6 @@ Jag gör samma vända på STH-sidan så vi har en spegelbild, mer eller mindre.
 Nu börjar det vara dags för att skapa och konfigurera den virtuella tunneln vi ska ha. Efter det är klart så gör vi två statiska IP routes.
 
 Nu är allt på plats, det  går bra att pinga mellan de olika siterna. 
-
-
 
 Kod för olika ändamål till switchar och router:
 
@@ -55,3 +57,8 @@ Kod för olika ändamål till switchar och router:
 
     ip route 10.0.1.0 255.255.255.0 192.168.255.1
     ip route 0.0.0.0 0.0.0.0 Serial 0/3/0
+
+Efter dagens arbete ser det ut ungefär såhär
+![Efter dagens arbete](<Screenshots/Skärmbild 2025-11-06 Efter dagens arbete.png>)<br><br>
+Och vi verkar kunna pinga mellan GBG och STH!<br>
+![alt text](<Screenshots/Skärmbild 2025-11-06 ping mellan sites.png>)
